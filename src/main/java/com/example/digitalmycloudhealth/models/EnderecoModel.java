@@ -1,15 +1,19 @@
 package com.example.digitalmycloudhealth.models;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import lombok.Data;
+
+@Entity
+@Table(name = "ENDERECO") // Adicione esta anotação se desejar especificar o nome da tabela
+@Data
 public class EnderecoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private  String logradouro;
+
+    private String logradouro;
 
     private String numero;
 
@@ -21,4 +25,7 @@ public class EnderecoModel {
 
     private String cep;
 
+    // Outros métodos, se necessário
 }
+
+

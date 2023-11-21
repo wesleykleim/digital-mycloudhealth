@@ -1,7 +1,16 @@
 package com.example.digitalmycloudhealth.models;
 
+import jakarta.persistence.*;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "PROFISSIONAL")
 public class ProfissionalModel {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String cpf;
@@ -15,4 +24,6 @@ public class ProfissionalModel {
     private String especialidade;
 
     private String email;
+
+    // Outros métodos, se necessário
 }

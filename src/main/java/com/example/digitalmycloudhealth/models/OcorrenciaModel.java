@@ -1,8 +1,18 @@
 package com.example.digitalmycloudhealth.models;
 
-import java.time.LocalDate;
 
+import jakarta.persistence.*;
+import java.time.LocalDate;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "OCORRENCIA")
 public class OcorrenciaModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     private LocalDate data;
 
@@ -14,10 +24,11 @@ public class OcorrenciaModel {
 
     private String laudoExame;
 
-    private String encaminhanmento;
+    private String encaminhamento;
 
     private String descricaoAtendimento;
 
     private String crm;
 
+    // Outros métodos, se necessário
 }

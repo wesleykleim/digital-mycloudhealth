@@ -6,8 +6,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-@Data
+import jakarta.persistence.Entity;
+
+@Entity
 @Table(name = "HOSPITAL")
+@Data
 public class HospitalModel {
 
     @Id
